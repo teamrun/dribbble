@@ -1,0 +1,45 @@
+/* line 5, roundtail.less */
+* {
+  box-sizing: border-box;
+}
+/* line 8, roundtail.less */
+.bubble {
+  width: 400px;
+  min-height: 200px;
+  border-radius: 80px;
+  border: 2px solid #2c92b0;
+  margin: 10em;
+  position: relative;
+}
+/* line 18, roundtail.less */
+.roundtail:before,
+.roundtail:after {
+  position: absolute;
+  content: '';
+  border: 2px solid #2c92b0;
+  box-sizing: border-box;
+}
+/* line 25, roundtail.less */
+.roundtail:before {
+  width: 160px;
+  height: 80px;
+  bottom: -2px;
+  left: -82px;
+  z-index: 10;
+  background-color: #fff;
+  border-style: none;
+  border-bottom-style: solid;
+}
+/* line 38, roundtail.less */
+.roundtail:after {
+  width: 160px;
+  height: 160px;
+  border-radius: 80px;
+  bottom: -2px;
+  left: -160px;
+  z-index: 100;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+}
