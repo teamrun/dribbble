@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+}
+.demo_box{
+    -webkit-animation:f1 10s forwards;
+    /*-moz-animation:f1 2s 1s forwards;*/
+    position:relative;
+    left:0px;
+    width:50px;
+    height:50px;
+    border-radius:50px;
+    margin:10px 0;
+    overflow:hidden;
+    background-color: #accded;
+}
+.ease{ 
+    -webkit-animation-timing-function:ease;
+    -moz-animation-timing-function:ease;
+}
+.linear{
+    -webkit-animation-timing-function:linear;
+    -moz-animation-timing-function:linear;
+}
+.ease-in{
+    -webkit-animation-timing-function:ease-in;
+    -moz-animation-timing-function:ease-in;
+}
+.ease-out{
+    -webkit-animation-timing-function:ease-out;
+    -moz-animation-timing-function:ease-out;
+}
+.ease-in-out{
+    -webkit-animation-timing-function:ease-in-out;
+    -moz-animation-timing-function:ease-in-out;
+}
+.step-start{
+    -webkit-animation-timing-function:step-start;
+    -moz-animation-timing-function:step-start
+}
+.step-end{
+    -webkit-animation-timing-function:step-end;
+    -moz-animation-timing-function:step-end;
+}
+.steps{
+    -webkit-animation-timing-function:steps(1);
+    /*-moz-animation-timing-function:steps(2)*/
+}
+.cubic-bezier{
+    -webkit-animation-timing-function:cubic-bezier(0.52,0,0.58,1.0);
+    -moz-animation-timing-function:cubic-bezier(0.52,0,0.58,1.0);
+}
+@-webkit-keyframes f1{
+    0%{left:0px;}
+    10%{left:500px;}
+    /*50%{left:100px;}*/
+    100%{left: 600px;}
+}
+/*@-moz-keyframes f1{
+    0%{left:10px;}
+    100%{left:500px;background:#f00}
+}     */               
+
+
+
+#reference{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    
+
+}
+.meta{
+    position: absolute;
+    top: 0;
+    height: 400px;
+    width: 100px;
+    background-color: #eee;
+}
+.meta:nth-child(2n+1){
+    background-color: #eee;
+}
+.meta:nth-child(2n){
+    background-color: #accde0;
+}
+.meta:nth-child(1){
+    left: 0;
+}
+.meta:nth-child(2){
+    left: 100px;
+}
+.meta:nth-child(3){
+    left: 200px;
+}
+.meta:nth-child(4){
+    left: 300px;
+}
+.meta:nth-child(5){
+    left: 400px;
+}
+.meta:nth-child(6){
+    left: 500px;
+}
