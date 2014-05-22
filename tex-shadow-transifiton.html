@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文本阴影实现粉碎效果</title>
+	<style>
+		#ctn{
+			background-color: #2F83A3;
+			position: relative;
+			width: 400px;
+			height: 100px;
+		}
+		#ctn p{
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100px;
+			width: 400px;
+			overflow: hidden;
+			line-height: 100px;
+			font-size: 5em;
+			color: transparent;
+			text-shadow: 0 0 100px rgba(255,255,255,0);
+			margin: 0;
+			text-align: center;
+			-webkit-transition: all 600ms ease-out;
+		}
+		#ctn.active p{
+			text-shadow: 0 0 1px rgba(255,255,255,1);
+		}
+	</style>
+</head>
+<body>
+	<div id="ctn">
+		<p>sherlock</p>
+	</div>
+</body>
+</html>

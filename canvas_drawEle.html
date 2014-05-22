@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>在canvas上绘制html元素</title>
+</head>
+<body>
+     <!-- <video id="target" src="http://r.myxotod.de/codepen.io/ambilight/sports.mp4" controls autoplay></video> -->
+     <img id="target" src="http://as.wiz.cn/wizas/a/users/avatar/chenllos@163.com?default=true"/>
+    <canvas></canvas>
+    <script>
+        var t = document.querySelector('#target');
+        var c = document.querySelector('canvas');
+        c.height = 300;
+        c.width = 600;
+        var ctx = c.getContext('2d');
+
+        function drawEle(){
+            // ctx的drawImage方法接受的第一个参数应该是img或video或其他canvas元素, 但是与draw相对应的导出功能:getImagedata 和 导出dataurl  都有同源的限制
+            ctx.drawImage( t, 0,0 );
+        }
+    </script>
+</body>
+</html>

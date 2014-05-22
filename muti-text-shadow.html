@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多重text-shadow效果</title>
+    <style>
+        body{
+            font-family: 'Anonymous Pro';
+        }
+
+        h1{
+            font-size: 7em;
+            /*font-weight: 600;*/
+            color: #accded;
+            /*text-shadow 没有spread-radius属性...*/
+            text-shadow: 0 0 0 red, 2px 0 0 red, 2px 2px 0 red, 0 2px 0 red, -2px 2px 0 red, -2px 0 0 red, -2px -2px 0 red, 0px -2px 0 red, 2px -2px 0 red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Wiz Note</h1>
+</body>
+</html>

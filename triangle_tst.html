@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>facebook的paper应用中三角动画</title>
+    
+</head>
+<body>
+     <style>
+         #demo{
+             position: relative;
+             margin-top: 40px;
+             height: 200px;
+             width: 150px;
+             background-color: #663A84;
+             -webkit-transition: all 250ms ease;
+         }
+         #demo:after{
+             position: absolute;
+             content: '';
+             /*     保留一定的偏差, 以便掩饰tst过程中发生的像素级差距        */
+             top: -36px;
+             left: 60px;
+/*             background-color: #663A84;*/
+             border: 20px solid transparent;
+             border-bottom-color: #663A84;
+             border-bottom-width: 20px;
+             -webkit-transition: all 250ms ease;
+         }
+         #demo.active:after{
+             top: -76px;
+             border-bottom-width: 60px;
+             
+         }
+         #demo.active{
+             margin-top: 80px;
+         }
+     </style>
+     <div id="demo"></div>
+     <a href="javascript: toggle();">切换动画</a>
+     
+     <script>
+         var demo = document.querySelector('#demo');
+         function toggle(){
+             if( demo.className == 'active'){
+                 demo.className ='';
+             }
+             else{
+                 demo.className = 'active'
+             }
+         }
+         
+     </script>
+</body>
+</html>

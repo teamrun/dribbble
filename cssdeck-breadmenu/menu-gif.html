@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_gif</title>
+    <style>
+        #entry{
+            position: relative;
+            height: 60px;
+            width: 70px;
+            list-style: none;
+            padding: 5px;
+            margin: 0;
+            background-color: #2B85C3;
+            box-sizing: border-box;
+        }
+        #entry li{
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background-color: #fff;
+            
+            -webkit-transition: top 200ms ease-in-out  235ms, margin 200ms ease-in-out  235ms, -webkit-transform 150ms ease-in-out;
+        }
+        li.iterm1{
+            top: 5px;
+        }
+        #entry li.iterm2{
+
+            top: 50%;
+            /* -4px/2    */        
+            margin-top: -2px;
+            -webkit-transition: opacity 0ms ease-in-out 200ms;
+        }
+        li.iterm3{
+            /* 60-5-5 */
+            top: 50px;
+        }
+        #entry.active li.iterm1{
+            top: 50%;
+            margin-top: -2px;
+            -webkit-transform: rotate(45deg);
+            -webkit-transition: top 200ms ease-in-out, margin 200ms ease-in-out, -webkit-transform 150ms ease-in-out 235ms;
+        }
+        #entry.active li.iterm2{
+            opacity: 0;
+            -webkit-transition: opacity 0ms ease-in-out 200ms;
+        }
+        #entry.active li.iterm3{
+            top: 50%;
+            margin-top: -2px;
+            -webkit-transform: rotate(-45deg);
+            -webkit-transition: top 200ms ease-in-out, margin 200ms ease-in-out, -webkit-transform 150ms ease-in-out 235ms;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <ul id="entry">
+            <li class="iterm1"></li>
+            <li class="iterm2"></li>
+            <li class="iterm3"></li>
+        </ul>
+    </div>
+
+    <a href="javascript:toggleClass();">切换</a>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- <img src="menu-gif.gif" alt=""> -->
+
+    <script>
+    var ul = document.querySelector('#entry');
+        function toggleClass(){
+            if( ul.className == '' ){
+                ul.className = 'active';
+            }
+            else{
+                ul.className = '';
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

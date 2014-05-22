@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击显示群组成员</title>
+    <style>
+        .group{
+            position: relative;
+            height: 200px;
+            width: 200px;
+            border-radius: 100px;
+            background-color: #accded;
+        }
+        .dece{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 200px;
+            width: 200px;
+            margin-left: -100px;
+            margin-top: -100px;
+            background-color: #C570FD;
+            border-radius: 100px;
+            -webkit-transition: all 200ms ease-in;
+        }
+        .member-ctn{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 0px;
+            width: 0px;
+            margin-left: 0px;
+            margin-top: 0px;
+            background-color: #2F83A3;
+            overflow: hidden;
+            border-radius: 100px;
+            -webkit-transition: all 200ms ease-in 200ms;
+        }
+        .group.showmember .dece{
+            height: 0px;
+            width: 0px;
+            margin-left: 0px;
+            margin-top: 0px;
+        }
+        .group.showmember .member-ctn{
+            height: 200px;
+            width: 200px;
+            margin-left: -100px;
+            margin-top: -100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="group">
+        <div class="dece"></div>
+        <div class="member-ctn"></div>
+    </div>
+</body>
+</html>

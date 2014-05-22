@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        #ctn{
+            width: 400px;
+            height: 450px;
+            overflow: hidden;
+
+            position: relative;
+        }
+        .left, .center, .right{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            -webkit-transform: perspective(1000) rotateX(0deg);
+            -webkit-transition: all 200ms ease;
+        }
+        .left, .right{
+            background-color: rgba(255,255,255,0.5);
+            z-index: 100;
+        }
+        .left{
+            left: -100%;
+        }
+        .center{
+            background-image: url('http://blog.wiz.cn/wp-content/uploads/2014/01/player_haoran.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+        .right{
+            left: 100%;
+        }
+        #ctn.l .left, #ctn.r .right{
+            left: 0;
+        }
+        #ctn.l .center, #ctn.r .center{
+            -webkit-filter: blur(10px);
+        }
+    </style>
+</head>
+<body>
+    <div id="ctn">
+        <div class="left"></div>
+        <div class="center">
+            <br>
+            <span>#ctn.l .left, #ctn.r .right</span>
+        </div>
+        <div class="right"></div>
+    </div>
+        
+    <a href="javascript: slide('l')">向右划</a>
+    <br><br>
+    <a href="javascript: slide('r')">向左滑</a>
+    <br><br>
+    <a href="javascript: slide('')">重置</a>
+
+    <script>
+        var ctn = document.querySelector('#ctn');
+        function slide( c ){
+            ctn.className = c;
+        }
+    </script>
+</body>
+</html>
