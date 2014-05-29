@@ -6,15 +6,44 @@
     <link rel="stylesheet" href="./roundtail.css">
 </head>
 <body>
-    <ol>
-        <li>bubble border-radius: 10px;</li>
-        <li>tailWidth: 20px</li>
-        <li></li>
-        <li></li>
+
+<!--    ol#dialog-list>li.item*3>img.avatar+span.name+p.bubble-->
+
+    <ol id="dialog-list">
+        <li class="item left">
+            <img src="http://chenllos.com/src/img/mark.jpg" alt="mark" class="avatar">
+            <span class="name">Mark</span>
+            <p class="bubble">I'm talking about taking the entire social experience of college and putting it online. <span class="tail-patch"></span></p>
+        </li>
+        <li class="item right">
+            <img src="http://chenllos.com/src/img/wardo.jpg" alt="wardo" class="avatar">
+            <span class="name">Wardo</span>
+            <p class="bubble">I can't feel my legs. <span class="tail-patch"></span></p>
+        </li>
+        <li class="item left">
+            <img src="http://chenllos.com/src/img/mark.jpg" alt="mark" class="avatar">
+            <span class="name">Mark</span>
+            <p class="bubble">I know. <span class="tail-patch"></span></p>
+        </li>
     </ol>
 
-    <div class="bubble roundtail"></div>
-    <!-- <div class="bubble"></div> -->
-    <!-- <div class="bubble"></div> -->
+    <a href="javascript:toggleDraft()">toggle draft</a>
+
+    <script>
+        (function(){
+            var list = document.querySelector('#dialog-list');
+            window.toggleDraft = function(){
+                if( list.className.indexOf( 'draft' ) >=0 ){
+                    list.className = '';
+                }
+                else{
+                    list.className = 'draft';
+                }
+                return false;
+            }
+        })()
+        
+    </script>
+
 </body>
 </html>
